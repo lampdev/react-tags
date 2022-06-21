@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { DragDropContext } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
 import noop from 'lodash/noop';
 import uniq from 'lodash/uniq';
 import Suggestions from './Suggestions';
@@ -434,8 +432,4 @@ class ReactTags extends Component {
   }
 }
 
-module.exports = {
-  WithContext: DragDropContext(HTML5Backend)(ReactTags),
-  WithOutContext: ReactTags,
-  KEYS: KEYS,
-};
+export default ReactTags;
